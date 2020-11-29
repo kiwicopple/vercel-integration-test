@@ -49,7 +49,7 @@ export default function Redirect() {
       const json = await res.json();
       console.debug("callback", { json });
       setToken(json.token);
-      setProjects(json.projects);
+      setProjects(json.projects.projects);
       setLoading(false);
     };
     fn();
